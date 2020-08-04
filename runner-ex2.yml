@@ -1,0 +1,46 @@
+---
+# See these links for details:
+#   * https://wiki.saucelabs.com/display/DOCS/Command+Reference+for+Sauce+Runner+for+Real+Devices
+#   * https://wiki.saucelabs.com/display/DOCS/Creating+a+Sauce+Runner+for+Real+Devices+Configuration+File
+#   * https://wiki.saucelabs.com/display/DOCS/Examples+of+Device+Specifications+for+the+Real+Device+Runner
+
+
+# Test framework: "xcuitest" or "espresso"
+testFramework: espresso
+ 
+# Path to the app's .ipa or .app.
+app: ./LoanCalc.apk
+ 
+# Path to the test runner app's .ipa or .app.
+test: ./LoanCalc-tests.apk
+ 
+# Path where XML test reports will be saved.
+xmlFolder: ./reports
+
+# Interval in seconds to check test results. Default is 30.
+checkFrequency: 10
+ 
+# Define a list of devices on which the tests should be executed.
+devices: 
+  
+  # Example 2: minimal configuration.
+  # Run two tests on separately available devices in my pool.
+  - datacenter: US
+    testname: Loan Calc Espresso Tests from Example 2 - calcLoanViaUI
+
+    # For Espresso testing, various keys can be passed (only one type of each key!).
+    # See the Android documentation for more details:
+    # https://developer.android.com/studio/test/command-line#RunTestExamples
+    envs:
+    - key: class
+      value: io.billmeyer.loancalc.LoanCalcTest#calcLoanViaUI
+
+  - datacenter: US
+    testname: Loan Calc Espresso Tests from Example 2 - calcLoanViaAPI
+
+    # For Espresso testing, various keys can be passed (only one type of each key!).
+    # See the Android documentation for more details:
+    # https://developer.android.com/studio/test/command-line#RunTestExamples
+    envs:
+    - key: class
+      value: io.billmeyer.loancalc.LoanCalcTest#calcLoanViaAPI
