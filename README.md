@@ -5,13 +5,13 @@ of the native framework capability.
 
 ## Prerequisites
 
-The test runner used by Sauce Labs to execute the Espresso tests is a downloadable Java jar file.  The current release is provided in this release but can also be downloaded from [https://wiki.saucelabs.com/display/DOCS/Using+Espresso+for+Real+Device+Testing]().
+The test runner used by Sauce Labs to execute the Espresso tests is a downloadable Java jar file.  The current release is provided in this release but can also be downloaded from https://wiki.saucelabs.com/display/DOCS/Using+Espresso+for+Real+Device+Testing.
 
 The scripts in this repo were developed on macOS and expect JDK 11 to be installed and available.
 
 ## Setup
 
-A prebuilt native Android application and it's Espresso test cases are included in this repo.  Source to this application can be found on GitHub at [https://github.com/billmeyer/LoanCalcAndroid]().
+A prebuilt native Android application and it's Espresso test cases are included in this repo.  Source to this application can be found on GitHub at https://github.com/billmeyer/LoanCalcAndroid.
 
 The application is bundled in `LoanCalc.apk` and the tests cases are bundled in `LoanCalc-tests.apk`.
 
